@@ -1,0 +1,510 @@
+
+/*Fuente de Google*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/*Para quitarle el margen al documento*/
+* , body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/*------------------BARRA DE NAVEGACION------------------*/
+
+
+
+/*Todos los a que está adentro de los li que están adentro de los nav */
+.nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 0 29px 0 rgba(245, 103, 233, 0.459);
+    height: 6rem;   
+}
+
+/*Todos los a que está adentro de los li que están adentro de los nav */
+.nav li a {
+    margin: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: verdana;
+    color: black;
+}
+
+/*Todos los <ul> que estan adentro de los li que están adentro de la .barra-nav */
+.barra-nav ul {
+    padding-right: 100px;
+}
+ 
+/*Menu hamburguesa, oculto en vista web*/
+.burger{
+    display: none;
+}
+
+/*------------------CONTAINER - PRINCIPAL------------------*/
+
+
+.container-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5%;
+}
+
+.hola{
+    color:black;
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, verdana;
+}
+
+.Lidia-Bejarano{
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    color:#ea80fc;
+    font-weight: 700;
+}
+
+.mi-descripcion{
+    color:black;
+    font-size: 1rem;
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, verdana;
+    padding-top:2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-skills > p{
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 40%;
+}
+
+.imagen{
+    max-width: 500px;
+    padding: 5%;
+}
+
+
+
+/*------------------CONTAINER - SKILLS------------------*/
+
+
+
+
+/*2do Contenedor general que mide el 100% del ancho del viewport (pantalla) y el ancho se ajusta al contenido - color gris*/
+.container-skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(246,247,251);
+    text-align: center;
+}
+
+
+/*Contenedor que contiene 1. La caja del texto + 2. La grilla*/
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 55px 0px 20px 0px;
+}
+
+/*Contenedor para la grilla*/
+.contenedor-box{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width:60%;
+    padding-bottom: 5%;
+}
+
+/*Los bloques de la grilla*/
+.box-skills{
+    width: 160px;
+    margin: 10px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #dddfe5;
+}
+
+/*Los <p> que estan dentro de los bloques */
+.box-skills p {
+    font-size: 1rem;
+    font-family: verdana;
+    font-weight: 700;
+    margin: 10px;
+    padding:30px;
+}
+
+.skills p{
+    width: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.skills-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/*Iconos de tecnologias*/
+i {
+    font-size: 4rem;
+}
+
+h3 {
+    font-family: verdana;
+    font-size: 2.5rem;
+    padding: 20px;
+}
+
+
+
+/*------------------CONTAINER FRASE------------------*/
+
+
+
+.container-frase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#ff4081;
+    height: 70vh;
+    color: white;
+}
+.container-frase i{
+    font-size: 4rem;
+    padding-bottom:5%;
+}
+.contenedor-frase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frase{
+    text-align: center;
+    vertical-align: center;
+    font-size: 2rem;
+    font-family: verdana;
+    width: 80%;   
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+button, .button {
+    background-color:#ea80fc;
+    padding: 15px 20px;
+    margin-top: 35px;
+    border-radius: 40px;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: verdana;
+    color: white !important;
+}
+
+
+/*El selector a:link y a:visited hace referencia al detalle de los links y de los links visitados*/
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+
+/*------------------CONTAINER PROYECTOS------------------*/
+
+
+
+.container-proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.proyectos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    text-align: center;
+}
+.frase-text{
+    font-size: 1.2rem;
+    font-family: verdana;
+    padding: 2%;
+}
+
+/*------------------CONTAINER PROYECTOS------------------*/
+
+.proyectos-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2%;
+}
+.proyectos-nav a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:0px 30px;
+    margin: 8px;
+    
+}
+
+.proyectos-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.box-proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    margin: 1%;
+    padding:2%;
+    border-radius: 8px;
+    width: 240px;
+    height: 219px;
+}
+
+.proyectos-grid img{
+    width:190px;
+    height: 140px;
+}
+
+a p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700px;
+    color: grey;
+    font-size: 1rem;
+}
+
+.container-skills p{
+    padding: 2%;
+  }
+.container-skills{
+    padding-top: 5%;
+}
+
+/*------------------FOOTER------------------*/
+.nav-footer{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-footer li a {
+    margin: 15px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-family: verdana;
+    color: white;
+}
+.container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ea80fc;
+    height: 40vh;
+    color: white;
+}
+.nav-footer i{
+    font-size: 2.5rem;
+    padding: 10px;
+    padding-top: 40px;
+}
+.container-footer p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    padding-top: 15px;
+}
+
+/*------------------MEDIA QUERIES------------------*/
+
+
+
+@media (max-width: 900px) {
+        .container-principal {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        .principal{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hola {
+            color: black;
+            font-size: 2rem;
+            font-family: verdana;
+        }
+        .Lidia-Bejarano {
+            font-family: "Dancing Script", cursive;
+            font-size: 3.2rem;
+            color: fuchsia;
+        }
+        .mi-descripcion {
+            color: deepskyblue;
+            font-size: 1rem;
+
+            font-family: verdana;
+            padding-bottom: 5%;
+        }
+        .imagen {
+            width: 60%;
+            padding: 0px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            height: 4rem;   
+        }
+        .nav li a {
+            margin: 10px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            font-family: verdana;
+            color: black;
+        }
+
+        .barra-nav ul {
+            padding-right: 0px;
+}
+        .fas{
+            display: none;
+        }
+        .contenedor-box{
+            width: 80%;
+        }
+
+  } 
+
+  @media (max-width: 600px) {
+    h3{
+        font-size: 1.5rem;
+    }
+
+      .nav li a {
+          display: none;
+      }
+      nav .burger {
+          display: block;
+          flex-direction: column;
+          align-items: flex-end;
+          font-size: 0.1rem;
+      }
+
+      nav .burger i{
+          font-size: 2rem;
+          padding-right: 25px;
+      } 
+      .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
+      }
+      .box-skills{
+          width: 110px;
+          margin: 10px;
+          padding:30px;
+      }
+
+      .imagen{
+          width: 80%;
+          padding-top:25px;
+      }
+    
+      .proyectos-nav a{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding:0px 10px;
+        margin: 5px;
+        font-size: 0.8rem;
+    }
+    .proyectos-nav{
+        padding-bottom: 20px;
+    }
+    .frase-text{
+        font-size: 0.8rem;
+    }
+    .contenedor-box{
+        width: 100%;
+    }
+    .container-skills p{
+        width: 80%;
+        padding-bottom:20px ;
+    }
+    .box-skills{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:90px;
+        padding: 20px;
+
+        margin: 5px;
+    }
+    .box-skills p{
+        font-size: 0.7rem;
+        padding: 0px;
+        font-weight: 400px;
+        color: rgb(66, 64, 64);
+
+    }
+    .box-skills i{
+        font-size: 3rem;
+    }
+    .nav-footer li a{
+        font-size: 0.6rem;
+        padding:0px;
+        margin: 10px;
+    }
+    .nav-footer i{
+        font-size: 2rem;
+        padding: 10px;
+        padding-top: 40px;
+    }
+   
+   }
