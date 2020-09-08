@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 /*Para quitarle el margen al documento*/
+
+/* Si agregamos el selector universal *, los estilos se le van a aplicar a **todos** los elementos 
+de nuestra web. Por lo tanto no es necesario agregar ademas el body: ya lo tiene por el selector universal */
 * , body {
     margin: 0px;
     padding: 0px;
@@ -17,8 +20,11 @@
 /*Todos los a que está adentro de los li que están adentro de los nav */
 .nav {
     display: flex;
+    /* No es necesario agregar row, ya que se pone por defecto */
     flex-direction: row;
     list-style: none;
+    /* No es necesario text decoration none aqui: no influye en nada. 
+    Se lo debemos decir a los a. */
     text-decoration: none;
     justify-content: flex-end;
     align-items: center;
@@ -28,13 +34,18 @@
 
 /*Todos los a que está adentro de los li que están adentro de los nav */
 .nav li a {
+    /* Al ser elementos en linea, los a solo pueden tener margin right y left */
     margin: 30px;
     font-size: 1rem;
+    /* No es necesario este text decoration none ya que luego se lo aplicas a todos los a */
     text-decoration: none;
     font-family: verdana;
+    /* Es preferible utilizar colores en HEX que con sus nombres */
     color: black;
 }
 
+/* Esta description de mas abajo no es correcta: no estas seleccionando todos los ul dentro de los li
+sino todos los ul dentro de barra-nav */
 /*Todos los <ul> que estan adentro de los li que están adentro de la .barra-nav */
 .barra-nav ul {
     padding-right: 100px;
@@ -63,6 +74,8 @@
 }
 
 .hola{
+    /* El color de texto se hereda, asi que es preferible darselo al contenedor padre y en todo caso cambiarlo
+    en los elementos que lo tienen diferente (como tu nombre). De esa manera no lo repetimos tanto.  */
     color:black;
     font-size: 2.5rem;
     font-family: Verdana, Geneva, Tahoma, verdana;
@@ -77,12 +90,17 @@
 
 .mi-descripcion{
     color:black;
+    /* No es necesario el font size de 1rem ya que lo tienen por defecto los p.  
+    Por otro lado, noto que usas tanto padding como margin para dar distancia hacia arriba
+    Seria preferible uno solo: margin es el mas apropiado en este caso. */
     font-size: 1rem;
     margin-top: 20px;
     font-family: Verdana, Geneva, Tahoma, verdana;
     padding-top:2%;
 }
 
+/* Dado que aqui estas estilando a *todas* las a de tu web, esto deberia estar en los estilos generales
+(arriba de todo) y no aqui.  */
 a {
     text-decoration: none;
 }
@@ -129,6 +147,7 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    /* no es necesario align items center aqui */
     align-items: center;
     width:60%;
     padding-bottom: 5%;
@@ -153,6 +172,9 @@ a {
     font-family: verdana;
     font-weight: 700;
     margin: 10px;
+
+    /* Este padding no se esta aplicando ya que lo pisa el de container-skills p que pusiste mas abajo
+    (en la linea 350 aprox) */
     padding:30px;
 }
 
@@ -215,21 +237,29 @@ h1 {
     font-size: 1.5rem;
 }
 
+/* Aqui estilas tanto los elementos que tienen la etiqueta button (no hay ninguno en tu pagina) como los
+elementos que tienen la clase button.  */
 button, .button {
     background-color:#ea80fc;
     padding: 15px 20px;
     margin-top: 35px;
     border-radius: 40px;
     border: none;
+    /* No es necesario este text decoration none ya que ya lo tienen todos los a */
     text-decoration: none;
+    /* No es necesario este list style ya que ya lo tienen los ul */
     list-style: none;
     font-family: verdana;
+    /* No usamos important. No se considera buena practica. Necesitar un important revela que hay
+    algo en tu estilado que no esta bien resuelto. En este caso, que le diste color negro a todos los
+    a:link cuando no era necesario (ya que aqui tenes un a que no deberia estar de color negro) */
     color: white !important;
 }
 
 
 /*El selector a:link y a:visited hace referencia al detalle de los links y de los links visitados*/
 
+/* Deberian ir mas arriba, ya que son estilos generales */
 a:link{
     color: black;
 }
@@ -243,6 +273,7 @@ a:visited{
 
 
 .container-proyectos{
+    /* Ni justify content, ni width ni height son necesarios aqui */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -254,18 +285,24 @@ a:visited{
     flex-direction: column;
     align-items: center;
     padding: 5%;
+    /* text align center no es necesario aqui */
     text-align: center;
 }
+
+/* Este estilo para la frase deberia ir en su seccion correspondiente, no aqui */
 .frase-text{
     font-size: 1.2rem;
     font-family: verdana;
     padding: 2%;
 }
 
+/* Aqui duplicas el comentario "container proyectos", que definiste mas arriba */
 /*------------------CONTAINER PROYECTOS------------------*/
 
 .proyectos-nav{
     display: flex;
+    /* Ni flex row, ni justify, ni flex wrap son necesarios aqui 
+    Flex wrap de hecho te empeora el diseño en algunas resoluciones, como por ejemplo 621px */
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
@@ -280,6 +317,7 @@ a:visited{
 
 .proyectos-grid{
     display: flex;
+    /* ni flex row ni align items center son necesarios aqui */
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -304,11 +342,16 @@ a:visited{
     height: 219px;
 }
 
+/* Proyectos grid deberia tener un tamaño fijo, y la img width 100% y height auto: no es buena 
+practica estilar directamente las imagenes  ya que pueden deformarse */
+
 .proyectos-grid img{
     width:190px;
     height: 140px;
 }
 
+/* Como la idea es que este estilo se le aplica a todos los p adentro de las cajas de skills, 
+.container-skills p es un selector mas apropiado en este caso en lugar de este, que es muy general */
 a p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700px;
@@ -325,6 +368,7 @@ a p{
 
 /*------------------FOOTER------------------*/
 .nav-footer{
+    /* ni flex direction row, ni list style, ni text decoration, ni justify-content, ni align items son necesarios */
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -365,11 +409,13 @@ a p{
 
 @media (max-width: 900px) {
         .container-principal {
+            /* no es necesario agregar display flex, ya que el elemento ya lo tiene en el estilo de desktop */
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
         }
         .principal{
+            /* solo align-items: center es necesario aqui */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -377,19 +423,21 @@ a p{
             text-align: center;
         }
         .hola {
+            /* solo font size es necesario aqui */
             color: black;
             font-size: 2rem;
             font-family: verdana;
         }
         .Lidia-Bejarano {
             font-family: "Dancing Script", cursive;
+                        /* solo font size es necesario aqui */
             font-size: 3.2rem;
             color: fuchsia;
         }
         .mi-descripcion {
             color: deepskyblue;
             font-size: 1rem;
-
+            /* no es necesario repetir font family */
             font-family: verdana;
             padding-bottom: 5%;
         }
@@ -398,6 +446,7 @@ a p{
             padding: 0px;
         }
         .nav {
+            /* no es necesario repetir display flex */
             display: flex;
             justify-content: center;
             height: 4rem;   
@@ -405,6 +454,7 @@ a p{
         .nav li a {
             margin: 10px;
             font-size: 0.8rem;
+            /* no son necesarios los siguientes estilos */
             text-decoration: none;
             font-family: verdana;
             color: black;
@@ -432,6 +482,9 @@ a p{
       }
       nav .burger {
           display: block;
+
+          /* ninguno de estos tres estilos es necesario. recorda que las ordenes de flex
+          solo las podemos dar a un elemento que tenga display: flex, no display: block */
           flex-direction: column;
           align-items: flex-end;
           font-size: 0.1rem;

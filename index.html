@@ -6,6 +6,18 @@
     <title>Lidia Bejarano</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+    
+    <!-- No es algo que hablamos en clase, pero te lo comento para que sepas: no se considera
+    buena practica tener tanto codigo escrito de manera horizontal que obligue a hacer
+    scroll para leerlo todo. En general, cuando tengamos mas de 80 o 100 caracteres
+    en una linea, lo preferible es insertar un salto de linea. Cuando trabajamos con 
+    HTML, este salto de linea se hace en cada atributo. Es decir:
+
+    <link rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" 
+        crossorigin="anonymous"> -->
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/star.png">
 </head>
@@ -19,7 +31,18 @@
             <li><a href="#hola">HOLA</a></li>
             <li><a href="#skills">CONOCIMIENTOS</a></li>
             <li><a href="#proyectos">PROYECTOS</a></li>
+
+            <!-- este a no lleva a ningun lado porque el footer tiene el id frase -->
             <li><a class="button" href="#contacto" >CONTACTO</a></li>
+
+            <!-- "burguer" no es un buen nombre de clase, ya que no me describe que es funcionalmente este elemento
+            Recorda que el objetivo (siempre es un ideal) es que mi HTML pueda ser leido y entendido
+            incluso sin tener que ver la pagina web. Por eso usamos descriptores funcionales para las clases:
+            nos dicen que es una cosa y que hace, no como se ve. "Burguer" no es claro: podria ser muchisimas
+            cosas diferentes. "Menu-mobile" o "menu-hamburguesa" en todo caso son mejores.  
+        
+        Nota que abris la etiqueta como div pero la cerras como button, deberia ser o div o button en ambos
+    -->
             <div class="burger"><i class="fas fa-bars"></i></button>
         </ul>
     </nav>
@@ -28,10 +51,17 @@
 
 
     <!--SECCION 1 - PRINCIPAL -->
-
+<!-- Este elemento deberia ser section, no div -->
     <div  class="container-principal" id ="hola">
         <div class="principal">
+            <!-- El h1 debe describir el titulo principal de nuestra pagina, y se refiere a lo mas importante. 
+            En el caso de tu portfolio, no es el "hola" el texto mas importante, sino tu nombre. 
+            En terminos de SEO, los buscadores como Google le van a dar mas importancia al h1 que a otros
+            textos al momento de posicionar tu web en una busqueda. Queremos que los lectores encuentren
+            tu pagina buscando "Hola, soy", o queremos que la encuentren buscando tu nombre? -->
             <h1 class="hola"> ¡Hola! Soy </h1>
+            <!-- Intenta no utilizar mayusculas en tus nombres de clase. Para HTML es lo mismo, pero para CSS no. 
+            La convencion es que siempre se escriba en minusculas.  -->
             <p class="Lidia-Bejarano"> Lidia Bejarano </p>
             <p class="mi-descripcion"> Analista de tráfico, feminista, estudiante y amadora de los animales </p>
             <a class="button" href="#proyectos">LO QUE HAGO</a>
@@ -42,11 +72,15 @@
 
     <!--SECCION 2 - CONOCIMIENTOS -->
 
-
+    <!-- Este elemento deberia ser section, no div -->
     <div id="skills" class="container-skills">
+        <!-- Los titulos de organizan de manera jerarquica: el h1 es el mas importante, y solo tiene que haber uno. 
+        Los h2 siguen en importancia, luego los h3, etc. En este caso, no tenes ningun h2 en tu web. Y estos
+        titulos son los mas importantes despues de tu nombre: deberian ser h2 en lugar de h3.  -->
         <h3>CONOCIMIENTOS</h3>
         <p>Aún no aprendí a desarollar con todos, pero los estoy cultivando y pronto me verán aplicarlos a nuevos proyectos.</p>
             
+        <!-- "Contenedor-box" no es un buen nombre, ya que no es claro qué es. Contenedor-skills es mas apropiado -->
             <div class="contenedor-box">
                 <div class="box-skills">
                     <i class="devicon-html5-plain colored"></i>
@@ -80,7 +114,8 @@
 
     <!--SECCION 3 - FRASE -->
 
-
+<!-- Aqui hay dos contenedores, que no son necesarios. Con uno basta.  -->
+<!-- Este elemento deberia ser section, no div -->
     <div id="frase" class="container-frase">
         <div class="contenedor-frase">
             <i class="fas fa-heart"></i>
@@ -95,11 +130,17 @@
 
     <!--SECCION 4 - PROYECTOS -->
 
-
+<!-- Este elemento deberia ser section, no div -->
     <div id="proyectos" class="container-proyectos">
+<!-- Nuevamente aqui tenes un div proyectos dentro de container proyectos, cuando no parece ser necesaria esta
+duplicacion. Con un solo div alcanza.  -->
         <div class="proyectos">
             <h3>MIS PROYECTOS</h3>
             <div class="proyectos-nav">
+                <!-- No es algo que haya mencionado mucho asi que no cuenta como correccion sino como comentario:
+                estos no deberian ser <a>, ya que no son links, no van a llevarnos a ningun lugar cuando
+                la pagina este terminada. Son botones, ya que su objetivo va a ser filtrar los distintos
+                proyectos, por lo que su etiqueta deberia ser <button> -->
                 <a href="" class="button"> Todos</a>
                 <a href=""> HTML/CSS</a>
                 <a href=""> Javascript</a>
@@ -149,7 +190,7 @@
 
     <!--SECCION 4 - FOOTER -->
 
-
+<!-- Este elemento deberia ser footer, no div. Nota que tiene el id frase, cuando deberia ser contacto-->
     <div id="frase" class="container-footer">
             <ul class="nav-footer">
                 <li><a href="#hola">HOLA</a></li>
@@ -159,6 +200,7 @@
                 <div class="burger"><i class="fas fa-bars"></i>
             </ul>
             <ul class="nav-footer">
+                <!-- Aqui deberian haber links a sitios externos  -->
                 <i class="fab fa-twitter"></i>
                 <i class="fab fa-github"></i>
                 <i class="fab fa-linkedin-in"></i>
